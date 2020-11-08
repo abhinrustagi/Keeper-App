@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Note from "./components/Note";
 import CreateArea from "./components/createArea";
 
-function App() {
+function Notes() {
 
   const [notes, setNotes] = useState([]);
 
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default Notes;

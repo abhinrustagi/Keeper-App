@@ -1,8 +1,10 @@
 import React from "react";
 
+import Input from "./input";
+
 function LoginBox() {
     return <div>
-        <h1>Login or Register</h1>
+        <h1>Login</h1>
         <form>
             <div>
                 <label for="name">Your username</label>
