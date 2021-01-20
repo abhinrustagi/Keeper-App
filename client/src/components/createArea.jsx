@@ -3,16 +3,16 @@ import React, { useState } from "react";
 function CreateArea(props) {
   const [note, setNote] = useState({
     title: "",
-    content: ""
+    content: "",
   });
 
   function handleChange(event) {
     const { name, value } = event.target;
 
-    setNote(prevNote => {
+    setNote((prevNote) => {
       return {
         ...prevNote,
-        [name]: value
+        [name]: value,
       };
     });
   }
@@ -21,7 +21,7 @@ function CreateArea(props) {
     props.onAdd(note);
     setNote({
       title: "",
-      content: ""
+      content: "",
     });
     event.preventDefault();
   }
@@ -38,22 +38,26 @@ function CreateArea(props) {
 
   return (
     <div>
-      <form onMouseLeave = {hideTitle}>
-        {visibility && <input
-          name="title"
-          onChange={handleChange}
-          value={note.title}
-          placeholder="Title"
-        /> }
+      <form onMouseLeave={hideTitle}>
+        {visibility && (
+          <input
+            name="title"
+            onChange={handleChange}
+            value={note.title}
+            placeholder="Title"
+          />
+        )}
         <textarea
           name="content"
           onChange={handleChange}
           value={note.content}
           placeholder="Take a note..."
           rows="3"
-          onMouseDown = {expandTitle}
+          onMouseDown={expandTitle}
         />
-        <button onClick={submitNote}><i className="fas fa-plus"></i></button>
+        <button onClick={submitNote}>
+          <i className="fas fa-plus"></i>
+        </button>
       </form>
     </div>
   );
