@@ -38,7 +38,7 @@ function CreateArea(props) {
 
   return (
     <div>
-      <form onMouseLeave={hideTitle}>
+      <form className="Add__Note" onMouseLeave={hideTitle}>
         {visibility && (
           <input
             name="title"

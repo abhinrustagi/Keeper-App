@@ -1,0 +1,42 @@
+.login {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 25px;
+}
+
+.Login__box h2 {
+  text-align: center;
+}
+
+.Login__box {
+  padding: 25px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #f4b400;
+}
+
+.input_group {
+  margin: 15px auto;
+}
+
+.input_group input {
+  width: 100%;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #e8eae6;
+  margin: 5px auto;
+}
+
+.Login__box button {
+  padding: 5px 15px;
+  border-radius: 4px;
+  margin: auto;
+  border: 1px solid #f4b400;
+  background-color: #f4b400;
+  display: block;
+}
