@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+
+const notesRouter = require("./routers/Notes");
+const authRouter = require("./routers/Auth");
+
 require("dotenv").config();
 
 app.use(bodyParser.json());
@@ -25,6 +29,9 @@ db.once("open", function () {
 app.get("/", (req, res) => {
   res.send("Hello");
 });
+
+app.use("/notes", notesRouter);
+app.use("/auth", authRouter);
 
 app.listen(8888 || process.env.PORT, () => {
   console.log("Server started.");
